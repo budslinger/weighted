@@ -1,0 +1,4 @@
+class Weighted::Weight
+
+  
+end
