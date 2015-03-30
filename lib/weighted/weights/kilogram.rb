@@ -1,11 +1,11 @@
 module Weighted
-  class Milligram < Weight
+  class Kilogram < Weight
     def scale
-      1
+      1000 * 1000
     end
 
     def unit
-      'milligram'
+      'kilograms'
     end
   end
-end 
+end

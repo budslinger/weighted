@@ -1,11 +1,13 @@
 module Weighted
-  class Milligram < Weight
+
+  class Ounce < Weight
     def scale
-      1
+      28 * 1000
     end
 
     def unit
-      'milligram'
+      'ounce'
     end
   end
-end 
+
+end

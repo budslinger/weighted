@@ -6,21 +6,25 @@ describe Weighted do
     let(:measure){1.gram}
 
     it 'should of a weight' do
-      expect(measure.class).to be(Weight)
+      expect(measure.is_a?(Weighted::Weight)).to be_truthy
     end
   end
 
   describe 'usage' do
     it 'grams to milligrams' do
-      expec(1.gram).to eq(1000.milligrams)
+      expect(1.gram).to eq(1000.milligrams)
+    end
+
+    it 'grams failure' do
+      expect(2.gram).not_to eq(1000.milligrams)
     end
 
     it 'ounces to grams' do
-      expect(1.oz).to eq(28.grams)
+      expect(1.ounce).to eq(28.grams)
     end
 
-    it 'ounces to pounts' do
-      expect(1.pound).to eq(16.ounces)
+    it 'grams to kilograms' do
+      expect(1.kilogram).to eq(1000.grams)
     end
   end
 
